@@ -1,0 +1,3 @@
+---
+# tasks file for centos_docker_host
+- import_playbook: install_docker_packages.yml
