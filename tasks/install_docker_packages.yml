@@ -1,7 +1,7 @@
 - name: Install docker packages
   yum:
     name:
-      - yum-config-manager
+      - docker
     update_cache: true
     state: latest
   register: result
