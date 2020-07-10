@@ -2,6 +2,8 @@
   yum:
     name:
       - docker
+      - epel-release
+      - python-pip
     update_cache: true
     state: latest
   register: result
