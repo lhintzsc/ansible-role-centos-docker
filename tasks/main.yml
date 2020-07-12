@@ -1,3 +1,4 @@
 ---
 # tasks file for centos_docker_host
+- include: install_epel_release.yml
 - include: install_docker_packages.yml
