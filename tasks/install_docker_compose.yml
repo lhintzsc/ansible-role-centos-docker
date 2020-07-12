@@ -10,6 +10,13 @@
   yum:
     name:
       - epel-release
+    update_cache: true
+    state: latest
+  register: resultyum
+
+- name: Install epel release and docker compose
+  yum:
+    name:
       - docker-compose
     update_cache: true
     state: latest
