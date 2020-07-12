@@ -1,9 +1,9 @@
 - name: Install docker packages
   yum:
     name:
-      - docker
       - epel-release
-      - python-pip
+      - docker
+      - docker-compose
     update_cache: true
     state: latest
-  register: result
+  register: resultyum

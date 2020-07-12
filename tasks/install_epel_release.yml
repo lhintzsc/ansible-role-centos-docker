@@ -1,0 +1,7 @@
+
+# https://serverfault.com/questions/764900/how-to-remove-this-warning-this-system-is-not-registered-to-red-hat-subscriptio
+- name: Set nabled = 0 in /etc/yum/pluginconf.d/subscription-manager.conf
+  lineinfile:
+    path: /etc/yum/pluginconf.d/subscription-manager.conf
+    regexp: '^enabled='
+    line: enabled=0
