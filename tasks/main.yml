@@ -1,4 +1,4 @@
 ---
 # tasks file for centos_docker_host
 - include: install_docker.yml
-- include: install_docker_packages.yml
+- include: install_docker_compose.yml
