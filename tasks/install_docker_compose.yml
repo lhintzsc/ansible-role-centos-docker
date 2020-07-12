@@ -1,0 +1,16 @@
+
+# https://serverfault.com/questions/764900/how-to-remove-this-warning-this-system-is-not-registered-to-red-hat-subscriptio
+- name: Set enabled = 0 in /etc/yum/pluginconf.d/subscription-manager.conf
+  lineinfile:
+    path: /etc/yum/pluginconf.d/subscription-manager.conf
+    regexp: '^enabled='
+    line: enabled=0
+
+- name: Install epel release and docker compose
+  yum:
+    name:
+      - epel-release
+      - docker-compose
+    update_cache: true
+    state: latest
+  register: resultyum

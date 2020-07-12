@@ -1,0 +1,7 @@
+- name: Install docker packages
+  yum:
+    name:
+      - docker
+    update_cache: true
+    state: latest
+  register: resultyum
