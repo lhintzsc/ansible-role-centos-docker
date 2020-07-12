@@ -5,3 +5,11 @@
     path: /etc/yum/pluginconf.d/subscription-manager.conf
     regexp: '^enabled='
     line: enabled=0
+
+- name: Install epel release
+  yum:
+    name:
+      - epel-release
+    update_cache: true
+    state: latest
+  register: resultyum

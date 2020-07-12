@@ -1,7 +1,6 @@
 - name: Install docker packages
   yum:
     name:
-      - epel-release
       - docker
       - docker-compose
     update_cache: true
